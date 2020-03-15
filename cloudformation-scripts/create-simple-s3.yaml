@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: Simple S3 Bucket Creation
+
+Parameters:
+  BucketName:
+    Type: String
+    Description: The name of the S3 bucket
+    Default: <Provide a Name for the Bucket>
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      # Static bucket name would be better when creating with other resources     
+      BucketName: !Ref BucketName
+      Tags:
+      -
+        Key: <Description for the Key>
+        Value: <Value for the Key>
+
