@@ -1,4 +1,5 @@
 #!/bin/bash
+# script required root privileges
 yum install httpd php php-mysql -y
 wget https://wordpress.org/wordpress-5.1.1.tar.gz
 tar -xzf wordpress-5.1.1.tar.gz
