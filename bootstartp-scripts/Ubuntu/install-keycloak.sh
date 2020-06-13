@@ -36,5 +36,7 @@ cd /opt/keycloak/bin
 ./add-user-keycloak.sh --user admin --password <password> --realm master
 # Logging in to the server using the created user # CHANGE THE PASSWORD
 ./kcadm.sh config credentials --server http://localhost:8080/auth --realm master --user admin --password <password>
+# reloading the server
+systemctl restart keycloak
 # removing SSL required option
 ./kcadm.sh update realms/master -s sslRequired=NONE
